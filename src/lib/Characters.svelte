@@ -1,6 +1,8 @@
 <script>
   export let character;
 
+  const { image, name, status, species } = character;
+
   const characterStatus = {
     alive: "Alive",
     dead: "Dead",
@@ -11,18 +13,18 @@
 </script>
 
 <div class="container-characters">
-  <img src={character.image} alt={character.name} />
+  <img src={image} alt={name} />
   <div class="information">
-    <h3>{character.name}</h3>
+    <h3>{name}</h3>
     <p
       class="status"
-      class:alive={character.status === alive}
-      class:dead={character.status === dead}
-      class:unknown={character.status === unknown}
+      class:alive={status === alive}
+      class:dead={status === dead}
+      class:unknown={status === unknown}
     >
-      {character.status}
+      {status}
     </p>
-    <p>{character.species}</p>
+    <p>{species}</p>
   </div>
 </div>
 

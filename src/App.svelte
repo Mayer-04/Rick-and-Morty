@@ -29,7 +29,7 @@
   <Buttons {page} {fetchCharacters} />
   <section>
     <!-- Componente para cambiar de página -->
-    {#each characters as character}
+    {#each characters as character (character)}
       <Characters {character} />
     {/each}
   </section>
