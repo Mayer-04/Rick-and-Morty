@@ -25,15 +25,19 @@
   }
 
   .previous {
-    background-color: rgb(255, 152, 0);
+    background-color: #ff9800;
     color: #fff;
     padding: 10px;
     cursor: pointer;
+    border-radius: 10px;
+    border: none;
   }
   .next {
     background-color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 10px;
+    border: none;
   }
 </style>
