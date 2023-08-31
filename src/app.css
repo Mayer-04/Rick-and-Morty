@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/Inter.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: #f5f5dc;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
