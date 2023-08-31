@@ -1,4 +1,5 @@
 <script>
+  import "./app.css";
   import Buttons from "./lib/Buttons.svelte";
   import Characters from "./lib/Characters.svelte";
 
@@ -25,14 +26,14 @@
 
 <main>
   <h1>Rick and Morty API</h1>
+  <Buttons {page} {fetchCharacters} />
   <section>
     <!-- Componente para cambiar de página -->
-    <Buttons {page} {fetchCharacters} />
     {#each characters as character}
       <Characters {character} />
     {/each}
   </section>
-  <footer>
-    <p>Creado por Mayer Chaves</p>
+  <footer class="footer">
+    <p class="footer-text">Creado por Mayer Chaves</p>
   </footer>
 </main>
