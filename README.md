@@ -1,7 +1,18 @@
-# Svelte + Vite
+## Tecnologías usadas
 
-# Comandos
+- [pnpm](https://pnpm.io/)
+- [svelte](https://svelte.dev/)
 
-- pnpm install
-- pnpm run dev
-- pnpm run build
+## Scripts
+
+- Instalar dependencias
+
+```bash
+pnpm install
+```
+
+- Modo desarrollo
+
+```bash
+pnpm run dev
+```
