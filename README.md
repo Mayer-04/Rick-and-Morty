@@ -1,4 +1,4 @@
-## Tecnologías usadas
+# Tecnologías usadas
 
 - [pnpm](https://pnpm.io/)
 - [svelte](https://svelte.dev/)
@@ -16,3 +16,7 @@ pnpm install
 ```bash
 pnpm run dev
 ```
+
+## Proyecto
+
+![ProyectoRick and Morty](./src/assets/pagina.png)
