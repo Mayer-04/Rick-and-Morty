@@ -28,7 +28,6 @@
   <h1>Rick and Morty API</h1>
   <Buttons {page} {fetchCharacters} />
   <section>
-    <!-- Componente para cambiar de página -->
     {#each characters as character (character)}
       <Characters {character} />
     {/each}
