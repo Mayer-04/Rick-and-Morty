@@ -22,13 +22,25 @@
     }
   };
   fetchCharacters(page);
+
+  const handleNextPage = () => {
+    if (page < 42) {
+      fetchCharacters(page + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      fetchCharacters(page - 1);
+    }
+  };
 </script>
 
 <main>
   <h1>Rick and Morty API</h1>
-  <Buttons {page} {fetchCharacters} />
+  <Buttons on:nextPage={handleNextPage} on:previousPage={handlePreviousPage} />
   <section>
-    {#each characters as character (character)}
+    {#each characters as character (character.id)}
       <Characters {character} />
     {/each}
   </section>

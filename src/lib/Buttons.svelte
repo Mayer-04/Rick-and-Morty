@@ -1,14 +1,14 @@
 <script>
-  export let page;
-  export let fetchCharacters;
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
 
   const nextPage = () => {
-    fetchCharacters(page + 1);
+    dispatch("nextPage");
   };
+
   const previousPage = () => {
-    if (page > 1) {
-      fetchCharacters(page - 1);
-    }
+    dispatch("previousPage");
   };
 </script>
 
