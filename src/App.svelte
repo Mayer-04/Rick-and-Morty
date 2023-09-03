@@ -1,6 +1,6 @@
 <script>
   import "./app.css";
-  import Buttons from "./lib/Buttons.svelte";
+  import Button from "./lib/Button.svelte";
   import Characters from "./lib/Characters.svelte";
 
   let characters = [];
@@ -16,7 +16,7 @@
       const response = await fetch(URL);
       const data = await response.json();
       characters = data.results;
-      page = newPage;
+      return (page = newPage);
     } catch (error) {
       throw new Error(`Error obtaining characters: ${error}`);
     }
@@ -37,8 +37,13 @@
 </script>
 
 <main>
-  <h1>Rick and Morty API</h1>
-  <Buttons on:nextPage={handleNextPage} on:previousPage={handlePreviousPage} />
+  <header>
+    <h1>Rick and Morty API</h1>
+    <div class="container-buttons">
+      <Button content="Anterior" on:click={handlePreviousPage} />
+      <Button content="Siguiente" on:click={handleNextPage} />
+    </div>
+  </header>
   <section>
     {#each characters as character (character.id)}
       <Characters {character} />
@@ -48,3 +53,11 @@
     <p class="footer-text">Creado por Mayer Chaves</p>
   </footer>
 </main>
+
+<style>
+  .container-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.875rem;
+  }
+</style>
