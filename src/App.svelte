@@ -40,8 +40,10 @@
   <header>
     <h1>Rick and Morty API</h1>
     <div class="container-buttons">
-      <Button content="Anterior" on:click={handlePreviousPage} />
-      <Button content="Siguiente" on:click={handleNextPage} />
+      <Button on:click={handlePreviousPage} buttonType="secondary">
+        Anterior
+      </Button>
+      <Button on:click={handleNextPage}>Siguiente</Button>
     </div>
   </header>
   <section>
@@ -53,11 +55,3 @@
     <p class="footer-text">Creado por Mayer Chaves</p>
   </footer>
 </main>
-
-<style>
-  .container-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 1.875rem;
-  }
-</style>

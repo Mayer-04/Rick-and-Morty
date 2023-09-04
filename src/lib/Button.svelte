@@ -1,17 +1,28 @@
 <script>
-  export let content;
+  export let buttonType = "primary";
 </script>
 
-<button class="change-pages" on:click>{content}</button>
+<button class={buttonType} on:click>
+  <slot />
+</button>
 
 <style>
-  .change-pages {
-    background-color: #fff;
-    font-weight: 500;
-    color: #000;
-    padding: 10px;
+  .primary {
     cursor: pointer;
-    border-radius: 10px;
-    border: none;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 500;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  .secondary {
+    background-color: #ff9800;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 500;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   }
 </style>

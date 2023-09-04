@@ -41,6 +41,12 @@ h1::selection {
   color: var(--orange);
 }
 
+.container-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.875rem;
+}
+
 section {
   max-width: 62.5rem;
   margin: 0 auto;
