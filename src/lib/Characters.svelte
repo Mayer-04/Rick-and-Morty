@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   export let character;
 
   const { image, name, status, species } = character;
@@ -12,7 +13,7 @@
   const { alive, dead, unknown } = characterStatus;
 </script>
 
-<div class="container-characters">
+<div transition:fade class="container-characters">
   <img src={image} alt={name} />
   <div class="information">
     <h3>{name}</h3>
@@ -38,6 +39,7 @@
 
   img {
     width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
