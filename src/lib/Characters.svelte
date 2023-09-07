@@ -39,8 +39,7 @@
 
   img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    aspect-ratio: 1/1;
     border-radius: 10px 10px 0 0;
   }
 
