@@ -19,4 +19,4 @@ pnpm run dev
 
 ## Proyecto
 
-![ProyectoRick and Morty](./src/assets/pagina.png)
+![ProyectoRick and Morty](./src/assets/pagina.png).
